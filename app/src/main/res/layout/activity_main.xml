@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.no0ne.screenshotapp3.MainActivity">
+
+    <TextView
+        android:id="@+id/hidden_txtview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/this_is_a_hidden_textview"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        />
+
+    <TextureView
+        android:id="@+id/hidden_textureview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/capture_container"
+        android:background="#ccc"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/placeholder"
+        />
+    <LinearLayout
+        android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/black"
+        android:gravity="center"
+        >
+        <ImageButton
+            android:id="@+id/capture_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_refresh_white_24dp"
+            />
+        <ImageButton
+            android:id="@+id/capture_screenshot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/cameralens"
+            />
+        <ImageButton
+            android:id="@+id/capture_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_save_white_24dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
